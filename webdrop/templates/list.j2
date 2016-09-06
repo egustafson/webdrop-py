@@ -1,0 +1,13 @@
+{% extends "base.j2" %}
+{% block body %}
+  <div class="section">
+    {% for n in notes %}
+      <div class="note">
+        <h3>{{ n[0] }}</h3>
+        <textarea readonly="true" cols="60" rows="5">{{ n[1] }}</textarea>
+      </div>
+    {% else %}
+      <em>no notes.</em>
+    {% endfor %}
+  </div>
+{% endblock %}

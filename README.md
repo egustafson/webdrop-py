@@ -2,10 +2,24 @@
 Web dead drop.
 
 
-## Simple Run Instructions
+## Configuration
+
+* TBD
+
+
+## Execution
+
+### Command line / debug
 
 ```shell
+> export FLASK_DEBUG=1
 > export FLASK_APP=webdrop/webdrop.py
-> flask resetdb
 > flask run --host=0.0.0.0
+```
+
+### Docker-ized (foreground / debug)
+
+```shell
+> docker build -t webdrop .
+> docker run -it --rm -p 5000:5000 webdrop
 ```

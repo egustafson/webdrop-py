@@ -7,10 +7,12 @@
   </head>
   <body>
     <div class="page">
-      <h1>Web Drop</h1>
-      {% for message in get_flashed_messages() %}
-        <div class="flash">{{ message }}</div>
-      {% endfor %}
+      <div class="header">
+        <h1><a href="{{ url_for('index') }}">Web Drop</a></h1>
+        {% for message in get_flashed_messages() %}
+          <div class="flash">{{ message }}</div>
+        {% endfor %}
+      </div>
       {% block body %}{% endblock %}
     </div>
   </body>

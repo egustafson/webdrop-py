@@ -1,0 +1,24 @@
+{% extends "base.j2" %}
+{% block body %}
+  <div class="section">
+    <form id="note" method="post" action="{{ url_for('post') }}">
+      <fieldset>
+        <legend>New note</legend>
+        <input type="hidden" name="action" value="new-note">
+        <div>
+          <label>Key:
+            <input id="key-text" name="key-text" type="text" cols="60" placeholder="name" required autofocus>
+          </label>
+        </div>
+        <div>
+          <label>Note:
+            <textarea name="note-text" cols="60" rows="5"></textarea>
+          </label>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+{% endblock %}
